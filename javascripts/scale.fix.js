@@ -18,8 +18,3 @@ fixScale = function(doc) {
 	}
 
 };
-
-(function() {
-
-alert('hi')	;
-})();
