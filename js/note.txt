@@ -1,0 +1,8 @@
+phase1
+using angularjs / bootstrap, todo local application
+
+phase2
+using nodejs / mongoDB based server application
+
+phase3
+write epilogue
