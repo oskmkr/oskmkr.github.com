@@ -1,3 +1,6 @@
-var connect = require('connect'), http = require('http');
+var connect = require('connect'), serveStatic = require('serve-static');
 
-connect().use(connect.static('./')).use(connect.directory('./')).listen(8081);
+var app = connect();
+
+app.use(serveStatic("./"));
+app.listen(5000);

@@ -1,0 +1,22 @@
+{
+  "name": "oskmkr-blog-app",
+  "version": "1.0.0",
+  "main": "index.html",
+  "dependencies": {
+    "connect": "~3.3.4",
+    "serve-static": "~1.8.1"
+  },
+  "window": {
+    "title": "node-webkit demo",
+    "icon": "link.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600
+  }
+}

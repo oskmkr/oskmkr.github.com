@@ -1,3 +1,6 @@
 oskmkr.github.com
 =================
-fff
+oskmkr's blog app
+
+npm install
+
