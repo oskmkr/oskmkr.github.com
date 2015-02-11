@@ -1,22 +1,394 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
-img {
-  opacity: 0.2;
-  width: 150px;
-  -web-kit-transition: width 1s ease-out, opacity 3s ease;
+<div style="background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif; font-size: 0.9em; overflow-x: hidden; overflow-y: auto; margin: 0px !important; padding: 5px 20px 26px !important;padding: 20px;padding: 20px; color: rgb(0, 0, 0); font-size: 15px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', AppleSDGothicNeo-Medium, 'Segoe UI', 'Malgun Gothic', Verdana, Tahoma, sans-serif; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial;">
+  <p style="undefined; margin: 0px !important;margin: 1em 0px; word-wrap: break-word;"></p><ul>
+<li style="display: list-item; line-height: 1.4em;"><ul>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#javascript-essentials" title="javascript essentials" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">javascript essentials</a>
+</span>
+<!--span class="number">
+0
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#변수-선언" title="변수 선언" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">변수 선언</a>
+</span>
+<!--span class="number">
+1
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#주석" title="주석" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">주석</a>
+</span>
+<!--span class="number">
+2
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#data-type" title="data type" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">data type</a>
+</span>
+<!--span class="number">
+3
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#special-charaters" title="special charaters" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">special charaters</a>
+</span>
+<!--span class="number">
+4
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#coding-standard" title="coding standard" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">coding standard</a>
+</span>
+<!--span class="number">
+5
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#연산자(operators)" title="연산자(Operators)" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">연산자(Operators)</a>
+</span>
+<!--span class="number">
+6
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#조건문" title="조건문" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">조건문</a>
+</span>
+<!--span class="number">
+7
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#반복문" title="반복문" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">반복문</a>
+</span>
+<!--span class="number">
+8
+</span-->
+</li>
+<li style="display: list-item; line-height: 1.4em;"><span class="title">
+<a href="#함수" title="함수" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);">함수</a>
+</span>
+<!--span class="number">
+9
+</span-->
+</li>
+</ul>
+</li>
+
+</ul>
+<p style="margin: 1em 0px; word-wrap: break-word;"></p><h2 id="javascript-essentials" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="javascript-essentials" href="#javascript-essentials" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>javascript essentials</h2><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">Javascript</li>
+</ol><ul>
+<li style="display: list-item; line-height: 1.4em;">웹언어로 웹페이지의 일부 엘리먼트를 조작하기 위해 시작되었다.<br style="clear: both;">현재 엄청난 발전이 이루어져 client-side 뿐 아니라 Server-side 코드를 작성할 수도 있다.<br style="clear: both;">그 외 그 사용처는 무궁무진하다.</li>
+<li style="display: list-item; line-height: 1.4em;">독특한 언어</li>
+<li style="display: list-item; line-height: 1.4em;">클래스가 없으며, 함수(function)는 [일급 객체(first-class object)][1] 로 다양한 작업에 사용된다.<ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">변수나 데이터 구조 안에 담을 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">인자로 전달할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">반환 값(return value)으로 사용할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">런타임에 생성할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">할당에 사용된 이름과 관계없이 고유하게 식별할 수 있다.</li>
+</ol>
+</li>
+</ul><hr style="border: 1px solid rgb(204, 204, 204);border: 1px solid rgb(230, 230, 230);"><p style="margin: 1em 0px; word-wrap: break-word;">[1] : <strong class="highlight" style="color: black; padding: 0px 5px; background-color: rgb(253, 255, 182); -webkit-box-shadow: rgb(253, 255, 182) 0px 0px 5px; box-shadow: rgb(253, 255, 182) 0px 0px 5px;"> 일급객체(first-class object) </strong></p><ul>
+<li style="display: list-item; line-height: 1.4em;">변수에 저장할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">함수의 입력 파라메터로 사용할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">함수의 출력 파라메터로 사용할 수 있다.</li>
+<li style="display: list-item; line-height: 1.4em;">자료구조에 저장 가능해야한다.</li>
+</ul><p style="margin: 1em 0px; word-wrap: break-word;">◎ 컴퓨터 과학자 Christopher Strachey가 만든 조어<br style="clear: both;">◎ 함수가 런타임에도 생성되며, 함수의 인자로 전달되고 함수의 결과로서 리턴되며, 변수에 할당되는 것<br style="clear: both;">◎ 함수도 데이터처럼 구성가능해짐(Composability)<br style="clear: both;">◎ 일급함수라 함은 프로그램 언어에서 함수를 1급(first-class)의 지위로 사용하는가의 의미, JAVA, C<em class="underline" style="font-style: normal; text-decoration: underline;"> 등의 OOP 언어에서는 클래스가 일급(first-class)의 지위를 갖는다. 대체적으로 함수를 일급의 지위로 사용하는 언어를 함수형 언어라고 한다.<br style="clear: both;">◎ 함수형 언어 : Haskell, Erlang, ML, CommonLisp, Scheme, Clean, Clojure, Scala(최근 발표한 트위터에서 하루 2.5억의 타임라인을 저장, 분산 관리하는 프레임워크인 Gizzard 개발에 사용됨), Mathmatica, XSLT 그리고 javascript의 closures<br style="clear: both;">◎ C</em>도 C++11에서 Lambda expression과 closures를 도입한다고 한다. 자바는 8버전에서 클로저를 도입하려 하였으나 최근에 폐기되었다고 한다.</p><hr style="border: 1px solid rgb(204, 204, 204);border: 1px solid rgb(230, 230, 230);"><p style="margin: 1em 0px; word-wrap: break-word;">java 와 비슷한 형태로 사용할 수 있으나,<br style="clear: both;">javascript 만의 독특한 특성을 받아들이고 사용하는 것이 더 좋다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">Patterns<br style="clear: both;">모범적 관행, 쓰임새에 맞게 추상화된 원리, 어떤 문제를 해결하기 위한 템플릿 </li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">Javascript 개념<br style="clear: both;">a. 객체지향 언어<br style="clear: both;">객체란? 이름을 가진 프로퍼티를 가진 실체<br style="clear: both;">키-값 쌍<br style="clear: both;">JSON (JavaScript Object Notation)<br style="clear: both;">{ key : value }<br style="clear: both;">{ }<br style="clear: both;">객체의 프로퍼티가 함수(객체) 라면 메소드라 부른다.<br style="clear: both;">함수 또한 객체다. 프로퍼티와 메서드를 가질 수 있다.<br style="clear: both;">b. 클래스가 없다<br style="clear: both;">Java 객체를 만드는 과정</p>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">클래스(명세)를 선언</p>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">클래스를 바탕으로 객체를 생성</p>
+</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">Foo foo = new Foo();</p><p style="margin: 1em 0px; word-wrap: break-word;">Javascript 에서 객체를 만드는 과정</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">빈 객체를 필요한 시점에 생성</p>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">필요한 시점에 필요한 멤버를 추가하여 사용한다.</p>
+</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">foo = {};</p><p style="margin: 1em 0px; word-wrap: break-word;">객체란? 이름을 가진 프로퍼티를 가진 실체<br style="clear: both;">키-값 쌍<br style="clear: both;">JSON (JavaScript Object Notation)<br style="clear: both;">{ key : value }<br style="clear: both;">{ }<br style="clear: both;">객체의 프로퍼티가 함수(객체) 라면 메소드라 부른다.<br style="clear: both;">함수 또한 객체다. 프로퍼티와 메서드를 가질 수 있다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">클래스(명세)를 선언</p>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">클래스를 바탕으로 객체를 생성</p>
+</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">Foo foo = new Foo();</p><p style="margin: 1em 0px; word-wrap: break-word;">Javascript 에서 객체를 만드는 과정</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">빈 객체를 필요한 시점에 생성</p>
+</li>
+<li style="display: list-item; line-height: 1.4em;"><p style="margin: 1em 0px; word-wrap: break-word;">필요한 시점에 필요한 멤버를 추가하여 사용한다.</p>
+</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">foo = {};</p><p style="margin: 1em 0px; word-wrap: break-word;">Javascript 에서 상속을 구현하는 하나의 방법<br style="clear: both;">prototype 또한 객체이며, 모든 함수는 prototype 프로퍼티를 갖는다.</p><p style="margin: 1em 0px; word-wrap: break-word;">ECMAScript<br style="clear: both;">core javascript 프로그래밍 언어는 ECMAScript 표준에 기반을 두고 있다.<br style="clear: both;"><br style="clear: both;">JSLint<br style="clear: both;">정적 분석 도구<br style="clear: both;"><br style="clear: both;">console 객체<br style="clear: both;">javascipt에 포함되어 있지 않으나, 대부분의 브라우저에서 지원하는 객체로,<br style="clear: both;">alert() 과 달리 페이지 동작에 간섭을 주지 않고, 더 많은 정보를 쉽게 표현할  수  있다.</p><h1 id="javascript-syntax" style="clear: both;font-size: 2.2em; font-weight: bold; margin: 1.5em 0px 1em;"><a name="javascript-syntax" href="#javascript-syntax" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Javascript syntax</h1><h2 id="변수-선언" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="변수-선언" href="#변수-선언" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>변수 선언</h2><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var i = 0;
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">var</span> i = <span class="hljs-number" style="color: rgb(182, 86, 17);">0</span>;
+</code></pre><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;i = 0; // 전역 공간에 선언, anti-pattern
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;">i = <span class="hljs-number" style="color: rgb(182, 86, 17);">0</span>; <span class="hljs-comment" style="color: rgb(153, 149, 128);">// 전역 공간에 선언, anti-pattern</span>
+</code></pre><h2 id="주석" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="주석" href="#주석" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>주석</h2><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// 한줄 주석
+/* 
+여러 줄 주석
+*/
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-comment" style="color: rgb(153, 149, 128);">// 한줄 주석</span>
+<span class="hljs-comment" style="color: rgb(153, 149, 128);">/* 
+여러 줄 주석
+*/</span>
+</code></pre><h2 id="data-type" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="data-type" href="#data-type" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>data type</h2><table style="padding: 0px; border-collapse: collapse; border-spacing: 0px;background-color: rgb(250, 250, 250);">
+<thead>
+<tr>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">type</th>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);"></th>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">String</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">문자열</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">“” 혹은 ‘’ 를 이용하여 사용, ‘’ 를 추천한다.</td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">Number</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">숫자</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"></td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">Object</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">객체</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"></td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">boolean</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">불린</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">true, false</td>
+</tr>
+</tbody>
+</table><h2 id="special-charaters" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="special-charaters" href="#special-charaters" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>special charaters</h2><table style="padding: 0px; border-collapse: collapse; border-spacing: 0px;background-color: rgb(250, 250, 250);">
+<thead>
+<tr>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">character</th>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\n</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">new line</td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\b</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">backspace</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\f</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">formfeed</td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\r</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">carriage return</td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\t</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">tab</td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">\</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">escape character</td>
+</tr>
+</tbody>
+</table><h2 id="coding-standard" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="coding-standard" href="#coding-standard" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>coding standard</h2><table style="padding: 0px; border-collapse: collapse; border-spacing: 0px;background-color: rgb(250, 250, 250);">
+<thead>
+<tr>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">type</th>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">description</th>
+<th style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;font-weight: bold;border: 1px solid rgb(230, 230, 230);">prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">string</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">문자열</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;margin-top: 0px;margin-bottom: 0px;">var sName = 'oskm'</code></td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">Number</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">숫자</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;margin-top: 0px;margin-bottom: 0px;">var nAge = 10</code></td>
+</tr>
+<tr>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">Object</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">객체</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;margin-top: 0px;margin-bottom: 0px;">var oClass = {}</code></td>
+</tr>
+<tr style="background-color: rgb(242, 242, 242);">
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">Array</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);">배열</td>
+<td style="border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px;border: 1px solid rgb(230, 230, 230);"><code style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;margin-top: 0px;margin-bottom: 0px;">var aList = []</code></td>
+</tr>
+</tbody>
+</table><h2 id="연산자(operators)" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="연산자(operators)" href="#연산자(operators)" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>연산자(Operators)</h2><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">지정 연산자 : = , -=, +=, *=, /=</li>
+<li style="display: list-item; line-height: 1.4em;">비트(Bitwise)연산자 : &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=, &amp;=, ^=, |=</li>
+<li style="display: list-item; line-height: 1.4em;">수치 연산자 : +, - ,*, /, %, ++, —</li>
+<li style="display: list-item; line-height: 1.4em;">논리 연산자 : ||, &amp;&amp;, !</li>
+<li style="display: list-item; line-height: 1.4em;">비트 논리 연산자 : |, &amp;, ^</li>
+<li style="display: list-item; line-height: 1.4em;">비교 연산자 : ==, !=, &lt;=, &gt;=, &lt;, &gt;</li>
+<li style="display: list-item; line-height: 1.4em;">스트링 연산자 : +, +=</li>
+<li style="display: list-item; line-height: 1.4em;">오브젝트 생성 연산자 : new</li>
+</ol><h2 id="조건문" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="조건문" href="#조건문" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>조건문</h2><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;
+if([condition]) {
+
+} else if([condition]) {
+
+} else {
+
+}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;">
+<span class="hljs-keyword" style="color: rgb(184, 84, 212);">if</span>([condition]) {
+
+} <span class="hljs-keyword" style="color: rgb(184, 84, 212);">else</span> <span class="hljs-keyword" style="color: rgb(184, 84, 212);">if</span>([condition]) {
+
+} <span class="hljs-keyword" style="color: rgb(184, 84, 212);">else</span> {
+
+}
+</code></pre><h2 id="반복문" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="반복문" href="#반복문" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>반복문</h2><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;while([condition]) {
+    // do something...
 }
 
-img:hover {
-  opacity: 1;
-  width: 300px;
+do {
+    // do something...
+} while([condition]);
+
+for([executed before loop starts];[condition];[executed each time after the loop]) {
+    // do something...
 }
-</style>
-</head>
-<body>
-javascript design patterns
-<img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif"/>
-</body>
-</html>
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">while</span>([condition]) {
+    <span class="hljs-comment" style="color: rgb(153, 149, 128);">// do something...</span>
+}
+
+<span class="hljs-keyword" style="color: rgb(184, 84, 212);">do</span> {
+    <span class="hljs-comment" style="color: rgb(153, 149, 128);">// do something...</span>
+} <span class="hljs-keyword" style="color: rgb(184, 84, 212);">while</span>([condition]);
+
+<span class="hljs-keyword" style="color: rgb(184, 84, 212);">for</span>([executed before loop starts];[condition];[executed each time after the loop]) {
+    <span class="hljs-comment" style="color: rgb(153, 149, 128);">// do something...</span>
+}
+</code></pre><h2 id="함수" style="clear: both;font-size: 1.8em; font-weight: bold; margin: 1.275em 0px 0.85em;border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(230, 230, 230); line-height: 1.7em;"><a name="함수" href="#함수" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>함수</h2><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;
+function [function_name]([arguments]) {
+    // do something...
+}
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;">
+function [function_name]([arguments]) {
+    // do something...
+}
+</code></pre><h1 id="base-pattern" style="clear: both;font-size: 2.2em; font-weight: bold; margin: 1.5em 0px 1em;"><a name="base-pattern" href="#base-pattern" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>base pattern</h1><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">고급 javascript 프로그래밍을<br style="clear: both;">위한 유용한 기본 패턴을 알아본다. </p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">전역 변수 최소화<br style="clear: both;">전역 변수 선언 시 global 객체에 이 값이 생성된다. (브라우저에서는 window) </li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">전역 변수는 모든 코드 내에서 공유된다. 목적이 다른 전역 변수를 같은 이름으로 사용하게 될 경우 문제가 발생할 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">여러 스크립트들 간의 충돌을 막으려면 최소화 하여야 한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">특정 실행 context 內가 아니라면, this 는 이 global 객체를 가리킨다.</p><p style="margin: 1em 0px; word-wrap: break-word;">변수 선언 시 항상 var 를 사용할 것</p><p style="margin: 1em 0px; word-wrap: break-word;">javascript 는 변수 선언 없이 사용할 수 있고, 이러한 사용은 전역객체 프로퍼티가 된다.<br style="clear: both;">(암묵적 전역(implied globals)) - 안티 패턴</p><p style="margin: 1em 0px; word-wrap: break-word;">단일 var 패턴</p><p style="margin: 1em 0px; word-wrap: break-word;">‘함수 상단에 var 선언을 한번만 쓰는 패턴<br style="clear: both;"><br style="clear: both;">함수에서 필요로하는 모든 지역 변수를 한군데서 찾을 수 있다.<br style="clear: both;">변수를 선언 전에 사용할 때 발생하는 로직상 오류를 막아준다. - hoisting 방지<br style="clear: both;">변수 선언 후 사용에 대한 상기로 전역 변수 최소화에 도움<br style="clear: both;">코드량 감소</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">호이스팅(hoisting)</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">호이스팅(hoisting)</p><p style="margin: 1em 0px; word-wrap: break-word;">함수 내 어느 위치에서든 여러 var 선언을 사용할 수 있지만, 실제 모두 함수 상단에 변수가 선언된 것과 동일하게 동작한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">myname = “global”;<br style="clear: both;">(func() {<br style="clear: both;">     console.log(myname); // “undefined”<br style="clear: both;">     var myname = “local”;<br style="clear: both;">     console.log(myname); // “local”<br style="clear: both;">})();</p><p style="margin: 1em 0px; word-wrap: break-word;">실제 동작<br style="clear: both;">myname = “global”;<br style="clear: both;">(func() {<br style="clear: both;">     var myname;<br style="clear: both;">     console.log(myname); // “undefined”<br style="clear: both;">     myname = “local”;<br style="clear: both;">     console.log(myname); // “local”<br style="clear: both;">})();</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">for-in loop</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">for-in loop</p><p style="margin: 1em 0px; word-wrap: break-word;">객체를 순회할 때 사용하라<br style="clear: both;">순서가 정해져 있지 않기 때문에 배열에 사용하는 것은 바람직 하지 않다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">내장 객체 생성자 확장</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">내장 객체 생성자 prototype은 확장하지 말자.</p><p style="margin: 1em 0px; word-wrap: break-word;">Object.prototype.myMethod = function() {<br style="clear: both;">    // do something<br style="clear: both;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">javascript 내장 메소드의 일관성을 기대하기 어려워진다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">완전 항등 연산자</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">완전 항등 연산자를 사용하라</p><p style="margin: 1em 0px; word-wrap: break-word;">암묵적 타입 캐스팅을 피하고, 명시적 비교를 수행함으로 예측하지 못한 결과를 피할 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">=<strong class="highlight" style="color: black; padding: 0px 5px; background-color: rgb(253, 255, 182); -webkit-box-shadow: rgb(253, 255, 182) 0px 0px 5px; box-shadow: rgb(253, 255, 182) 0px 0px 5px;">, !</strong> 완전 항등 연산자 값과 타입을 모두 확인한다.<br style="clear: both;"><br style="clear: both;">var nValue = 0;<br style="clear: both;"><br style="clear: both;">console.log(nValue =<strong class="highlight" style="color: black; padding: 0px 5px; background-color: rgb(253, 255, 182); -webkit-box-shadow: rgb(253, 255, 182) 0px 0px 5px; box-shadow: rgb(253, 255, 182) 0px 0px 5px;"> false);  // false<br style="clear: both;">console.log(nValue </strong> false);    // true</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">eval is evil</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">eval is evil</p><p style="margin: 1em 0px; word-wrap: break-word;">대게 eval() 없이 목표에 도달할 수 있는 더 나은 방법이 존재한다.<br style="clear: both;">최근 jsonp 보안 이슈도 이 맥락이다.
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">parseInt()<br style="clear: both;">parseInt 를 통한 숫자 변환에 정수 베이스를 지정하여 사용하자</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">일관성 있는 변환을 원한다면 항상 정수 베이스를 지정하여야 한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">API spec</p><p style="margin: 1em 0px; word-wrap: break-word;">parseInt(“문자열”, radix(정수베이스));</p><p style="margin: 1em 0px; word-wrap: break-word;">radix가 제공되지 않거나 수치 0이 제공되었으면, 그 정수 베이스를 알아내려는 시도를 한다. 첫 문자가 1~9 사이 수치이면 10진수로, 0X나 0x로 시작하였으면 16진수로 파싱(parse)하게 된다.0으로 시작되었으면 실제적으로 8진수가 아니더라도 8진수로 파싱한다. </p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">습관</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">명명 규칙을 준수하자</p><p style="margin: 1em 0px; word-wrap: break-word;">변수와 함수 이름을 일관된 방식으로 사용한다.<br style="clear: both;"><br style="clear: both;">생성자를 대문자로 시작하기(Pascal case)<br style="clear: both;">function MyConstructor () {</p><p style="margin: 1em 0px; word-wrap: break-word;">}<br style="clear: both;">메소드(camel case) 사용<br style="clear: both;">function myFunction() {<br style="clear: both;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">상수<br style="clear: both;">모든 글자를 대문자로 사용한다.<br style="clear: both;"><em>private 규칙<br style="clear: both;">private 프로퍼티나 메소드에 접두어로 </em>를 사용한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">JSLint 실행 습관화<br style="clear: both;">자동화 필요</p><p style="margin: 1em 0px; word-wrap: break-word;">실행되지 않는 코드<br style="clear: both;">변수를 정의하기 전에 사용한 경우<br style="clear: both;">불안전한 UTF문자<br style="clear: both;">void, with, eval 을 사용한 경우<br style="clear: both;">정규식 내에서 부적절하게 이스케이프한 문자</p><p style="margin: 1em 0px; word-wrap: break-word;">등을 찾아낸다.</p><h1 id="javascript-literal-과-생성자" style="clear: both;font-size: 2.2em; font-weight: bold; margin: 1.5em 0px 1em;"><a name="javascript-literal-과-생성자" href="#javascript-literal-과-생성자" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>Javascript literal 과 생성자</h1><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">객체 리터럴<br style="clear: both;">{ }</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">객체? 이름-값(key-value) 해시 테이블<br style="clear: both;">value 로 primitive type, 객체<br style="clear: both;">, function 모두 들어갈 수 있으며, 특히 function 은?</p><p style="margin: 1em 0px; word-wrap: break-word;">Code :<br style="clear: both;">var oFoo = { };</p><p style="margin: 1em 0px; word-wrap: break-word;">생성자 함수로 객체 생성</p><p style="margin: 1em 0px; word-wrap: break-word;">내장 생성자 함수 사용</p><p style="margin: 1em 0px; word-wrap: break-word;">var oFoo = new Object(); // 안티 패턴</p><p style="margin: 1em 0px; word-wrap: break-word;">객체 생성자를 왜 사용하지 말아야 하는가.<br style="clear: both;"><br style="clear: both;">Object() 내장 생성자는 파라메터로 값을 받을 수 있는데 파라메터 타입에 따라 다른 객체를 리턴한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">var o = new Object();<br style="clear: both;">console.log(o.constuctor === Object); // true<br style="clear: both;"><br style="clear: both;">var o = new Object(1);<br style="clear: both;">console.log(o.constuctor === Number); // true<br style="clear: both;"><br style="clear: both;">var o = new Object(“string”);<br style="clear: both;">console.log(o.constuctor === String); // true<br style="clear: both;"><br style="clear: both;">var o = new Object(true);<br style="clear: both;">console.log(o.constuctor === Boolena); // true<br style="clear: both;"><br style="clear: both;">런타임에 실행되는 값이 파라메터로 전달 되었을 때, 얘기치 못한 결과를얻는다.<br style="clear: both;">new Object() 를 사용해 객체를 생성하지 말라 - 안티패턴
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수 리터럴<br style="clear: both;">리터럴을 이용한 객체 생성 패턴</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">function</p><p style="margin: 1em 0px; word-wrap: break-word;">더 짧다.</p><p style="margin: 1em 0px; word-wrap: break-word;">클래스로 부터 생성해야 하는 것이 아님을 보여준다.</p><p style="margin: 1em 0px; word-wrap: break-word;">생성자 함수를 이용한 객체 생성<br style="clear: both;"><br style="clear: both;">함수 선언.<br style="clear: both;">var Foo = function(sName) {<br style="clear: both;">      this.sName = sName<br style="clear: both;">      this.do = function() {<br style="clear: both;">             return “I am “ + this.sName;<br style="clear: both;">      }<br style="clear: both;">}<br style="clear: both;"><br style="clear: both;">var oFoo = new Foo();</p><p style="margin: 1em 0px; word-wrap: break-word;">실제 동작<br style="clear: both;">var Foo = function(sName) {<br style="clear: both;">      var this;<br style="clear: both;">      this = {};<br style="clear: both;"><br style="clear: both;">      this.sName = sName<br style="clear: both;">      this.do = function() {<br style="clear: both;">             return “I am “ + this.sName;<br style="clear: both;">      }<br style="clear: both;">      return this;<br style="clear: both;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">생성자 함수를 new 를 이용해 호출하면, 항상 객체가 반환된다. (암묵적으로 this반환)</p><p style="margin: 1em 0px; word-wrap: break-word;">기본값은 this,<br style="clear: both;">원하는 객체를 return 하도록 정의할 수 있다. 만약 객체가 아닌 값을 반환하도록 하면 this 를 반환</p><p style="margin: 1em 0px; word-wrap: break-word;">만약 new 를 사용하지 않고 호출한다면??<br style="clear: both;">생성자 내부의 this 가 global 객체를(window) 가리키게 된다.<br style="clear: both;">전역 객체에 불필요한 프로퍼티가 생성되면서 더럽혀지게된다.<br style="clear: both;">예상하지 못한 런타임 에러를 발생 시킬 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">function Foo() {<br style="clear: both;">    this.age = 1;<br style="clear: both;">}<br style="clear: both;">var foo = Foo(); // 실행 순간 global객체(window) 에 age 가 추가된다.</p><p style="margin: 1em 0px; word-wrap: break-word;">해결을 위한 패턴 – 스스로를 호출하는 생성자</p><p style="margin: 1em 0px; word-wrap: break-word;">function Foo(sName) {<br style="clear: both;">     if(!(this instanceof Foo)) {<br style="clear: both;">           return new Foo();<br style="clear: both;">     }</p><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt; this.sName = sName;
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;"> this.sName = sName;
+</code></pre><p style="margin: 1em 0px; word-wrap: break-word;">}<br style="clear: both;"><br style="clear: both;">// ES 5 strict 모드에서는 동작하지 않음.<br style="clear: both;">function Foo(sName) {<br style="clear: both;">     if(!(this instanceof arguments.callee)) {<br style="clear: both;">           return new arguments.callee();<br style="clear: both;">     }</p><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code data-origin="&lt;pre&gt;&lt;code&gt; this.sName = sName;
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;"> this.sName = sName;
+</code></pre><p style="margin: 1em 0px; word-wrap: break-word;">}
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">배열 리터럴<br style="clear: both;">[] vs Array();<br style="clear: both;">var aShape = [“triangle”, “rect”, “circle”];<br style="clear: both;">var aShape = new Array(“triangle”, “rect”, “circle”);<br style="clear: both;"><br style="clear: both;">리터럴 문법이 훨씬 직관적이다.</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">배열 생성자</p><p style="margin: 1em 0px; word-wrap: break-word;">var array = new Array(3);  // [ undefined, undefined, undefined ]</p><p style="margin: 1em 0px; word-wrap: break-word;">숫자 하나를 전달할 경우 배열의 첫번째 값이 아니라 길이가 된다. </p><p style="margin: 1em 0px; word-wrap: break-word;">배열 생성자</p><p style="margin: 1em 0px; word-wrap: break-word;">var array = new Array(3.14); // RangeError: invalid array length</p><p style="margin: 1em 0px; word-wrap: break-word;">부동소수점 값을 전달할 경우 에러 발생</p><p style="margin: 1em 0px; word-wrap: break-word;">동적으로 배열을 생성할 때 얘기치 못한 오류 발생 위험이 있다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">JSON<br style="clear: both;">JavaScript Object Notation<br style="clear: both;">JavaScript Object Notation</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">객체 리터럴과의 차이점 - 프로퍼티명을 “” 로 감싸야한다. 항상 그런것은 아니고, 프로퍼티명에 공백문자가 포함된 경우</p><p style="margin: 1em 0px; word-wrap: break-word;">eval is evil -&gt; eval 을 사용하지 마라.</p><p style="margin: 1em 0px; word-wrap: break-word;">Jindo1 =&gt; toJSON() Object 재정의 했다… 안티패턴..ㅜ.ㅜ</p><p style="margin: 1em 0px; word-wrap: break-word;">Jindo1 core 발췌<br style="clear: both;">/<strong> @id Object.toJSON <em>/<br style="clear: both;">/</em><br style="clear: both;">Object.prototype.toJSON = function() {<br style="clear: both;">return JINDO.obj2json(this);<br style="clear: both;">};<br style="clear: both;">*/<br style="clear: both;">/</strong> @id Array.toJSON */<br style="clear: both;">Array.prototype.toJSON = function() {<br style="clear: both;">return JINDO.obj2json(this);<br style="clear: both;">};</p><p style="margin: 1em 0px; word-wrap: break-word;">Jindo2 =&gt; $Json() 사용<br style="clear: both;"><br style="clear: both;">각 프레임워크는 이러한 파싱 유틸을 기본 제공한다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">정규 표현식 리터럴</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">var regx = /\/gm;<br style="clear: both;">var regx = new RegExp(“\\“, “gm”);</p><p style="margin: 1em 0px; word-wrap: break-word;">g    전역매칭</p><p style="margin: 1em 0px; word-wrap: break-word;">m   여러줄 매칭</p><p style="margin: 1em 0px; word-wrap: break-word;">i     대소문자 구분없이 매칭</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">에러 객체<br style="clear: both;">Error() 등…<br style="clear: both;">name, message 프로퍼티를 갖는다.<br style="clear: both;">사용안1)</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">throw 는 어떤 객체든지 던질 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">try {<br style="clear: both;"><br style="clear: both;">throw {<br style="clear: both;">      name : “Error”,<br style="clear: both;">      message : “stack overflow…”,<br style="clear: both;">      type : “Oops”,<br style="clear: both;">      errorCallback : function errorHandler() {<br style="clear: both;">              // handle errors<br style="clear: both;">      }<br style="clear: both;">}<br style="clear: both;">} catch(e) {<br style="clear: both;">         alert(e.message);<br style="clear: both;">         e.errorCallback();<br style="clear: both;">}
+</p><p style="margin: 1em 0px; word-wrap: break-word;">사용안2)</p><p style="margin: 1em 0px; word-wrap: break-word;">throw Error(“stack overflow..”);<br style="clear: both;">new 를 굳이 사용하지 않아도 new 를 사용한 것과 같이 동작하므로, 조금 더 짧게…</p><h1 id="함수-i" style="clear: both;font-size: 2.2em; font-weight: bold; margin: 1.5em 0px 1em;"><a name="함수-i" href="#함수-i" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>함수 I</h1><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">Javascript 에서 가장 중요한 것은 함수를 완벽히 익히는 것이다. </p><p style="margin: 1em 0px; word-wrap: break-word;">javascript 는 중괄호 ({ })유효범위 가 없다!!<br style="clear: both;">오로지 함수 유효범위만 존재한다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수는 객체다.</li>
+<li style="display: list-item; line-height: 1.4em;">함수는 지역 유효범위를 제공한다.</li>
+</ol><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">Function 생성자 함수 사용<br style="clear: both;">// 안티 패턴</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">var add = new Function(“a, b”, “return a+b”);</p><p style="margin: 1em 0px; word-wrap: break-word;">이 코드로 알 수 있는것?</p><p style="margin: 1em 0px; word-wrap: break-word;">함수도 객체라는 것을 확인할 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">이 방식을 지양해야하는 이유</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">코드가 문자열로 전달되어 평가됨.</li>
+<li style="display: list-item; line-height: 1.4em;">이스케이프를 해주어야하는 난해함.</li>
+<li style="display: list-item; line-height: 1.4em;">유효 범위 제공 불가</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">그러나 동적으로 생성할 때는 필요할 수 있다..<br style="clear: both;">그러나 그런 날이 올까??</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">유효 범위</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">함수로 감싸진 경우만 지역 변수가 된다.<br style="clear: both;">함수가 유효범위를 제공한다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수 표현식과 함수 선언문<br style="clear: both;">함수 표현식(함수 리터럴)</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">// 기명 함수 표현식(named function expression)<br style="clear: both;">var foo = function foo() {<br style="clear: both;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">-&gt; 함수 객체의 name 프로퍼티에 add 랄 값이 들어간다. 그 외는 무명 함수 표현식과 동일.<br style="clear: both;">-&gt; 기명 함수 표현식을 다른 이름의 변수에 할당할 수 있으나, IE 에서는 잘 동작하지 않으므로 일치시키는 것이 좋다.<br style="clear: both;">// 무명 함수 표현식(unnamed function expression) -&gt; 함수 표현식(function expression)<br style="clear: both;">var foo = function() {<br style="clear: both;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">함수 선언문</p><p style="margin: 1em 0px; word-wrap: break-word;">function foo() {</p><p style="margin: 1em 0px; word-wrap: break-word;">}</p><p style="margin: 1em 0px; word-wrap: break-word;">함수 선언문과 함수 표현식의 차이<br style="clear: both;">함수 선언문은 전역 공간이나, 함수 내부에서만 사용가능하다.</p><p style="margin: 1em 0px; word-wrap: break-word;">즉, 함수 선언문을 사용할 수 없는 경우 함수 표현식을 사용한다. 함수 객체를 매개 변수로 전달하거나, 객체 리터럴로 매개 변수를 정의 하는 경우는 선언문을 사용할 수 없다.</p><p style="margin: 1em 0px; word-wrap: break-word;">함수 표현식을 사용하자.<br style="clear: both;">함수 선언문보다 함수 표현식을 사용하는 것이 다른 객체들과<br style="clear: both;">마찬가지로 객체의 일종이라는 것이 눈에 보인다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수 name 프로퍼티</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">// 함수 선언문<br style="clear: both;">function foo() {}<br style="clear: both;">// 기명 함수 표현식var foo = function foo() {};<br style="clear: both;">// 무명 함수 표현식var foou = function () {};<br style="clear: both;"><br style="clear: both;">console.log(foo.name); // foo<br style="clear: both;">console.log(foo.name); // foo<br style="clear: both;">console.log(foo.name); // FF, webkit 에서는 빈문자열(“”), IE 는 undefined
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수 호이스팅(hoisting)<pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function foo() {
+console.log('global foo()');
+}
+function bar() {
+console.log('global bar()');
+}
+(function() {
+console.log(typeof foo);     // function    
+console.log(typeof bar);     // function
+})();
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">foo</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{
+<span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global foo()'</span>);
+}
+<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">bar</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{
+<span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global bar()'</span>);
+}
+(<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{
+<span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">typeof</span> foo);     <span class="hljs-comment" style="color: rgb(153, 149, 128);">// function    </span>
+<span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">typeof</span> bar);     <span class="hljs-comment" style="color: rgb(153, 149, 128);">// function</span>
+})();
+</code></pre>
+</li>
+</ol><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function foo() {    console.log('global foo()');}function bar() {    console.log('global bar()');}(function() {    console.log(typeof foo);     // function    console.log(typeof bar);     // undefined
+    // 함수 선언, 정의된 함수가 hoisting 된다.
+    function foo() {        console.log('local foo()');    }    // 함수 표현, 변수 bar 만 hoisting 된다.    var bar = function() {        console.log('local bar()');    }})();
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">foo</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global foo()'</span>);}<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">bar</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global bar()'</span>);}(<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">typeof</span> foo);     <span class="hljs-comment" style="color: rgb(153, 149, 128);">// function    console.log(typeof bar);     // undefined</span>
+    <span class="hljs-comment" style="color: rgb(153, 149, 128);">// 함수 선언, 정의된 함수가 hoisting 된다.</span>
+    <span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">foo</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{        <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'local foo()'</span>);    }    <span class="hljs-comment" style="color: rgb(153, 149, 128);">// 함수 표현, 변수 bar 만 hoisting 된다.    var bar = function() {        console.log('local bar()');    }})();</span>
+</code></pre><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function foo() {    console.log('global foo()');}function bar() {    console.log('global bar()');}(function() {
+    function foo() {        console.log('local foo()');    }
+    var bar;
+
+    console.log(typeof foo);    console.log(typeof bar);    bar = function() {        console.log('local bar()');    }})();
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">foo</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global foo()'</span>);}<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">bar</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'global bar()'</span>);}(<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{
+    <span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">foo</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{        <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'local foo()'</span>);    }
+    <span class="hljs-keyword" style="color: rgb(184, 84, 212);">var</span> bar;
+
+    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">typeof</span> foo);    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">typeof</span> bar);    bar = <span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{        <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-string" style="color: rgb(96, 172, 57);">'local bar()'</span>);    }})();
+</code></pre><p style="margin: 1em 0px; word-wrap: break-word;">함수 선언문, 정의된 함수가 hoisting 된다<br style="clear: both;">함수 표현식, 변수만 hoisting 된다.</p><h1 id="함수-ii" style="clear: both;font-size: 2.2em; font-weight: bold; margin: 1.5em 0px 1em;"><a name="함수-ii" href="#함수-ii" style="text-decoration: none; vertical-align: baseline;color: rgb(50, 105, 160);"></a>함수 II</h1><p style="margin-top: 0px;margin: 1em 0px; word-wrap: break-word;">Javascript 에서 가장 중요한 것은 함수를 완벽히 익히는 것이다. </p><p style="margin: 1em 0px; word-wrap: break-word;">javascript 는 중괄호 ({ })유효범위 가 없다!!<br style="clear: both;">오로지 함수 유효범위만 존재한다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수는 객체다.</li>
+<li style="display: list-item; line-height: 1.4em;">함수는 지역 유효범위를 제공한다.</li>
+</ol><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">Callback 패턴</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">함수는 객체이므로 인자로 functon 을 전달할 수 있다.<br style="clear: both;">API 작성 시 매우 유용하다.<br style="clear: both;">함수 자신의 역할(핵심)에만 집중하고, 그 외의 처리에 대해서는 콜백 함수에 맞겨 자유롭게 동작할 수 있도록 한다.<br style="clear: both;">범용성, 확장성 확보</p><p style="margin: 1em 0px; word-wrap: break-word;">사용 예)<br style="clear: both;">$Ajax(<br style="clear: both;">// 생략<br style="clear: both;">    {<br style="clear: both;">// 생략<br style="clear: both;">onLoad : function() {<br style="clear: both;">          }<br style="clear: both;">    }<br style="clear: both;">$Fn(this._onEvent, this).attach(document.body, “click”);</p><p style="margin: 1em 0px; word-wrap: break-word;">특정 이벤트가 발생하면, 어떠한 행위를 수행하는, 대부분 클라이언트 개발은 event-driven 방식이다.<br style="clear: both;">콜백 패턴으로 인해 이러한 event-driven 개발 방식에 적합하다.
+</p><p style="margin: 1em 0px; word-wrap: break-word;">var doSomething = function(fCallback) {<br style="clear: both;">     // 뭔가 핵심적인 비지니스 로직<br style="clear: both;">     if(typeof fCallback == “function”) {<br style="clear: both;">          fCallback();     }}</p><p style="margin: 1em 0px; word-wrap: break-word;">유효범위 문제<br style="clear: both;">var myapp = {};myapp.name = ‘myApp1.0’;myapp.postProcessing = function() {     console.log(‘This is ‘ + this.name);}var doSomething = function(fCallback) {     // 뭔가 핵심적인 비지니스 로직     if(typeof fCallback == “function”) {          fCallback();     }}myapp. postProcessing(); // This is myApp1.0 doSomething(myapp.postProcessing); // This is</p><p style="margin: 1em 0px; word-wrap: break-word;">개선<br style="clear: both;">var myapp = {};myapp.name = ‘myApp1.0’;myapp.postProcessing = function() {     console.log(‘This is ‘ + this.name);}var doSomething = function(fCallback, oContext) {     // 뭔가 핵심적인 비지니스 로직     if(typeof fCallback == “function”) {          fCallback.call(oContext);     }}myapp.postProcessing(); // This is myApp1.0 doSomething(myapp.postProcessing, myapp); // This is myApp1.0 </p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">함수 반환</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">함수는 객체이므로 반환할 수 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">var counter = function() {<br style="clear: both;">    var i = 0;<br style="clear: both;">    return function() {<br style="clear: both;">        console.log(‘count : ‘ + i++);<br style="clear: both;">    }<br style="clear: both;">}<br style="clear: both;">var myCounter = counter();<br style="clear: both;">myCounter(); // count : 0<br style="clear: both;">myCounter(); // count : 1<br style="clear: both;">myCounter(); // count : 2</p><p style="margin: 1em 0px; word-wrap: break-word;">클로저(Closure)</p><p style="margin: 1em 0px; word-wrap: break-word;">함수를 실행하는데 필요한 지역변수와 결합된 Function 인스턴스<br style="clear: both;">콜백함수를 선언할 때 지역 변수를 유지하면서 참조할 수 있는 능력</p><p style="margin: 1em 0px; word-wrap: break-word;">함수가 선언되면, 해당 함수는 선언 시점에 범위안에 있는 변수를 참조할 수 있다. 함수가 참조할 수 있는 변수들은 선언한 후에 범위를 벗어나더라도 함수와 함께 수행된다.</p><p style="margin: 1em 0px; word-wrap: break-word;">(function() {<br style="clear: both;">     var local = 1; // 1) 함수 내 변수<br style="clear: both;">     window.setInterval(function() {<br style="clear: both;">          console.log(‘local=’ + local);<br style="clear: both;">          local++; // 내부 함수가 1) 을 참조<br style="clear: both;">     }, 300);<br style="clear: both;">})();</p><p style="margin: 1em 0px; word-wrap: break-word;">함수내의 변수를 내부함수가 참조하고 있기 때문에 유지되어 접근할수 있는 함수를 클로저라고 합니다.</p><p style="margin: 1em 0px; word-wrap: break-word;">콜백 함수가 실행되는 동안 local은 존재하지 않는다고 생각되어진다.<br style="clear: both;">함수의 선언으로 생성된 클로저는 local을 포함한다. 즉 함수의 생명주기 동안 변수가 해제되지 않고 범위에 있도록 유지된다.</p><p style="margin: 1em 0px; word-wrap: break-word;">특별히 주의할 점<br style="clear: both;">context 는 클로저의 일부로 포함되지 않는다.<br style="clear: both;">각 함수 호출은 자신의 함수 context 를 소유한다는 점.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">this의 모든 것</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">클래스 중심의 객체지향 언어에서는 메서드가 선언된 클래스의 인스턴스를 this 포인터가 참조한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">javascript에서는 함수가 어딘가에 속해서 선언되지 않는다. 함수의 선언이 아니라, 함수가 어떻게 호출되었는 지에 따라 결정된다.<br style="clear: both;">동일한 함수라도 어떻게 호출되었느지에 따라 다른 콘텍스트를 가짐을 의미한다.</p><pre style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; overflow: auto;"><code class="javascript hljs" data-origin="&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;window.name = 'window';function whoAmI() {    console.log(this.name);}var itsMe = {    name : 'itsMe'};whoAmI(); // windowitsMe.whoAmI = whoAmI;itsMe.whoAmI(); // itsMewhoAmI.call(itsMe); // itsMewhoAmI.apply(itsMe); // itsMe
+&lt;/code&gt;&lt;/pre&gt;" style="display: block;border: 1px solid rgb(204, 204, 204); white-space: pre; padding: 0.5em; margin: 0px;border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; word-break: break-all; word-wrap: break-word; border: 1px solid rgb(204, 204, 204); padding: 0px 5px; margin: 0px 2px;font-size: 0.9em; font-family: Consolas, Inconsolata, Courier, monospace;display: block; overflow-x: auto; background-color: rgb(41, 40, 36); color: rgb(166, 162, 140); padding: 0.5em; background-position: initial initial; background-repeat: initial initial;"><span class="hljs-built_in" style="color: rgb(182, 86, 17);">window</span>.name = <span class="hljs-string" style="color: rgb(96, 172, 57);">'window'</span>;<span class="hljs-function" style="color: rgb(102, 132, 225);color: rgb(184, 84, 212);"><span class="hljs-keyword" style="color: rgb(184, 84, 212);">function</span> <span class="hljs-title" style="color: rgb(153, 149, 128);color: rgb(102, 132, 225);">whoAmI</span><span class="hljs-params" style="color: rgb(182, 86, 17);">()</span> </span>{    <span class="hljs-built_in" style="color: rgb(182, 86, 17);">console</span>.log(<span class="hljs-keyword" style="color: rgb(184, 84, 212);">this</span>.name);}<span class="hljs-keyword" style="color: rgb(184, 84, 212);">var</span> itsMe = {    name : <span class="hljs-string" style="color: rgb(96, 172, 57);">'itsMe'</span>};whoAmI(); <span class="hljs-comment" style="color: rgb(153, 149, 128);">// windowitsMe.whoAmI = whoAmI;itsMe.whoAmI(); // itsMewhoAmI.call(itsMe); // itsMewhoAmI.apply(itsMe); // itsMe</span>
+</code></pre><p style="margin: 1em 0px; word-wrap: break-word;">실행 context 를 마음대로 지정할 수 있다.<br style="clear: both;">call 은 추가 매개 변수로 , 구분자를 이용해 받고,<br style="clear: both;">apply 는 추가 매개 변수로 객체의 배열을 받는다. </p><p style="margin: 1em 0px; word-wrap: break-word;">Jindo2 는 $Fn 에 bind 추가<br style="clear: both;">jindo.$Fn.prototype.bind = function() {<br style="clear: both;">       var a = jindo.$A(arguments).$value();<br style="clear: both;">       var f = this._func;<br style="clear: both;">       var t = this._this;<br style="clear: both;">       var b = function() {<br style="clear: both;">              var args = jindo.$A(arguments).$value();<br style="clear: both;">              // fix opera concat bug<br style="clear: both;">              if (a.length) args = a.concat(args);<br style="clear: both;">              return f.apply(t, args);<br style="clear: both;">       };<br style="clear: both;">       return b;<br style="clear: both;">};</p><p style="margin: 1em 0px; word-wrap: break-word;">jindo1 은 Function 에 bind 추가<br style="clear: both;">bind : function(obj) {<br style="clear: both;">              var f=this, a=$A(arguments);a.shift();<br style="clear: both;">              return function() {<br style="clear: both;">                     return f.apply(obj, a);<br style="clear: both;">              }<br style="clear: both;">       },
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">Lazy function definition</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">여러 번 호출될 수 있는 어떤 함수가 초기화 준비 작업을 단 한번만 수행할 때 유용하다.<br style="clear: both;">재정의 하면서 수행부의 양이 줄어들기 때문에 어플리케이션 성능향상에 도움</p><p style="margin: 1em 0px; word-wrap: break-word;">var myapp = {};<br style="clear: both;">myapp.name = ‘MyApp’;myapp.running = function() {    myapp.bStarted = true;    console.log(‘ready…’);    this.running = function() {        console.log(‘run…’);    }}myapp.running();myapp.running();myapp.running();
+</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">즉시 실행 함수<br style="clear: both;">함수가 선언되자마자 실행되도록 하는 문법이다. (스크립트가 로딩됨과 함께 수행된다.)</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">함수를 함수 표현식으로 선언한다.<br style="clear: both;">함수가 즉시 실행될 수 있도록 마지막에 괄호쌍을 추가한다.<br style="clear: both;">전체 함수를 괄호로 감싼다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">초기화 등 한번만 실행해야할 때</li>
+<li style="display: list-item; line-height: 1.4em;">따라서 이름이 지정된 함수를 생성할 필요가 없을 때</li>
+<li style="display: list-item; line-height: 1.4em;">초기화에만 사용할 지역 유효범위 변수를 사용할 때 </li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">사용한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">(function() {<br style="clear: both;">     // 구현부<br style="clear: both;">})();</p><p style="margin: 1em 0px; word-wrap: break-word;">(function(global, when) {<br style="clear: both;">     // 구현부<br style="clear: both;">})(this, new Date());<br style="clear: both;"><br style="clear: both;">와 같이 파라메터를 전달할 수도 있다.</p><p style="margin: 1em 0px; word-wrap: break-word;">즉시 실행함수는 전역 네임스페이스를 더럽히지 않고, Sandbox 를 제공하여 주기 때문에 모듈화에 유용하다. </p><p style="margin: 1em 0px; word-wrap: break-word;">즉 단위 테스트(점진적 개선 작업)에도 적합하다.</p><ol style="list-style-type: decimal;">
+<li style="display: list-item; line-height: 1.4em;">즉시 객체 초기화 패턴</li>
+</ol><p style="margin: 1em 0px; word-wrap: break-word;">즉시 실행 함수와 동일한  장점을 제공한다.</p><p style="margin: 1em 0px; word-wrap: break-word;">({<br style="clear: both;">// 설정 값 정의<br style="clear: both;">name : ‘myApp’,<br style="clear: both;">init : function() {<br style="clear: both;">     //초기화작업<br style="clear: both;">}<br style="clear: both;">}).init();</p></div>
