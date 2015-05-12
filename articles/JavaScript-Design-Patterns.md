@@ -6,6 +6,7 @@
 * 웹언어로 웹페이지의 일부 엘리먼트를 조작하기 위해 시작되었다.
 현재 엄청난 발전이 이루어져 client-side 뿐 아니라 Server-side 코드를 작성할 수도 있다.
 그 외 그 사용처는 무궁무진하다.
+---
 * 독특한 언어
 * 클래스가 없으며, 함수(function)는 [일급 객체(first-class object)][1] 로 다양한 작업에 사용된다.
     1. 변수나 데이터 구조 안에 담을 수 있다.
@@ -13,41 +14,37 @@
     3. 반환 값(return value)으로 사용할 수 있다.
     4. 런타임에 생성할 수 있다.
     5. 할당에 사용된 이름과 관계없이 고유하게 식별할 수 있다.
-    
-
------
+---
 [1] : == 일급객체(first-class object) ==
 * 변수에 저장할 수 있다.
 * 함수의 입력 파라메터로 사용할 수 있다.
 * 함수의 출력 파라메터로 사용할 수 있다.
 * 자료구조에 저장 가능해야한다.
-
-◎ 컴퓨터 과학자 Christopher Strachey가 만든 조어 
-◎ 함수가 런타임에도 생성되며, 함수의 인자로 전달되고 함수의 결과로서 리턴되며, 변수에 할당되는 것 
-◎ 함수도 데이터처럼 구성가능해짐(Composability) 
-◎ 일급함수라 함은 프로그램 언어에서 함수를 1급(first-class)의 지위로 사용하는가의 의미, JAVA, C++ 등의 OOP 언어에서는 클래스가 일급(first-class)의 지위를 갖는다. 대체적으로 함수를 일급의 지위로 사용하는 언어를 함수형 언어라고 한다. 
-◎ 함수형 언어 : Haskell, Erlang, ML, CommonLisp, Scheme, Clean, Clojure, Scala(최근 발표한 트위터에서 하루 2.5억의 타임라인을 저장, 분산 관리하는 프레임워크인 Gizzard 개발에 사용됨), Mathmatica, XSLT 그리고 javascript의 closures 
-◎ C++도 C++11에서 Lambda expression과 closures를 도입한다고 한다. 자바는 8버전에서 클로저를 도입하려 하였으나 최근에 폐기되었다고 한다.
-
------
-
+---
+* 컴퓨터 과학자 Christopher Strachey가 만든 조어
+* 함수가 런타임에도 생성되며, 함수의 인자로 전달되고 함수의 결과로서 리턴되며, 변수에 할당되는 것 
+* 함수도 데이터처럼 구성가능해짐(Composability) 
+* 일급함수라 함은 프로그램 언어에서 함수를 1급(first-class)의 지위로 사용하는가의 의미, JAVA, C++ 등의 OOP 언어에서는 클래스가 일급(first-class)의 지위를 갖는다. 대체적으로 함수를 일급의 지위로 사용하는 언어를 함수형 언어라고 한다. 
+* 함수형 언어 : Haskell, Erlang, ML, CommonLisp, Scheme, Clean, Clojure, Scala(최근 발표한 트위터에서 하루 2.5억의 타임라인을 저장, 분산 관리하는 프레임워크인 Gizzard 개발에 사용됨), Mathmatica, XSLT 그리고 javascript의 closures 
+* C++도 C++11에서 Lambda expression과 closures를 도입한다고 한다. 자바는 8버전에서 클로저를 도입하려 하였으나 최근에 폐기되었다고 한다.
+---
 java 와 비슷한 형태로 사용할 수 있으나, javascript 만의 독특한 특성을 받아들이고 사용하는 것이 더 좋다.
-
+---
 ### 2. Patterns
 모범적 관행, 쓰임새에 맞게 추상화된 원리, 어떤 문제를 해결하기 위한 템플릿 
-
+---
 ### 3. Javascript 개념
 a. 객체지향 언어
-
+---
 객체란? 이름을 가진 프로퍼티를 가진 실체
 키-값 쌍
-
+---
 JSON (JavaScript Object Notation)
 ```JSON
 { key : value }
 { }
 ```
-
+---
 객체의 프로퍼티가 함수(객체) 라면 메소드라 부른다.
 함수 또한 객체다. 프로퍼티와 메서드를 가질 수 있다.
 
