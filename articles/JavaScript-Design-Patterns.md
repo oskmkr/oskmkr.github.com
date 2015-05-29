@@ -1,7 +1,7 @@
 [TOC]
-
+---
 ## javascript essentials
-
+---
 ### 1. Javascript
 * 웹언어로 웹페이지의 일부 엘리먼트를 조작하기 위해 시작되었다.
 현재 엄청난 발전이 이루어져 client-side 뿐 아니라 Server-side 코드를 작성할 수도 있다.
